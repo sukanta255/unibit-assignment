@@ -1,3 +1,4 @@
+// return all possible 2D pairs from the given array
 function firstCombinationPairs(arr, target) {
     let pairs = [];
       for (let i = 0; i < arr.length; i++) {
@@ -24,6 +25,7 @@ function firstCombinationPairs(arr, target) {
       return result;
   }
   
+  // merged the pairs from the previous function and return it by sorted single array
   function mergeSortedArray(arr) {
     let mergedList = [];
     for (let subArray of arr) {
@@ -35,10 +37,12 @@ function firstCombinationPairs(arr, target) {
     return mergedArray;
   }
   
+  // return doubling target value
   function doubleTargetValue(target) {
     return target * 2;
   }
   
+  // finally this function return all possible pairs from the merged sorted single array
   function secondCombinationPairs(nums, target) {
     let combinations = [];
     nums.sort((a, b) => a - b);
@@ -50,7 +54,7 @@ function firstCombinationPairs(arr, target) {
     }
     return result;
   }
-  
+  // recursive function to Generate all possible combination
   function backtrack(nums, target, start, currentCombination, combinations) {
     if (target === 0) {
       combinations.push([...currentCombination]);
